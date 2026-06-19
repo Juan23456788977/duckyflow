@@ -10,6 +10,11 @@
   <p><b>Browser-Native BadUSB / DuckyScript Flasher via WebSerial</b></p>
   
   <p>
+    <a href="https://Juan23456788977.github.io/duckyflow">
+      <img src="https://img.shields.io/badge/Live_Demo-🟢_Online-00ff41?style=for-the-badge" alt="Live Demo" />
+    </a>
+  </p>
+  <p>
     <i>Bilingual Documentation (English & Español)</i>
   </p>
 </div>
