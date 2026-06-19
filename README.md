@@ -44,6 +44,18 @@
 
 ---
 
+## 🏗 System Architecture / Arquitectura del Sistema
+
+\`\`\`mermaid
+graph LR
+    A[Monaco Editor] -->|DuckyScript| B(Compiler Hook)
+    B -->|Uint8Array| C{WebSerial API}
+    C <-->|USB COM Port| D[Microcontroller]
+    D -->|COM Log| E[Serial Terminal UI]
+\`\`\`
+
+---
+
 ## 🚀 Usage / Uso
 
 1. Go to the live app (must be served over HTTPS).
