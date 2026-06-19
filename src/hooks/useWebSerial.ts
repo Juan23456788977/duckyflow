@@ -8,7 +8,7 @@ export function useWebSerial() {
   const writerRef = useRef<any>(null);
 
   const addLog = (msg: string) => {
-    setLogs(prev => [...prev, \`[\${new Date().toLocaleTimeString()}] \${msg}\`]);
+    setLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] ${msg}`]);
   };
 
   const connect = useCallback(async () => {
@@ -28,7 +28,7 @@ export function useWebSerial() {
       setIsConnected(true);
       addLog("Conexión USB/Serial establecida exitosamente.");
     } catch (err: any) {
-      addLog(\`ERROR de Conexión: \${err.message}\`);
+      addLog(`ERROR de Conexión: ${err.message}`);
       console.error(err);
     }
   }, []);
@@ -44,7 +44,7 @@ export function useWebSerial() {
       setIsConnected(false);
       addLog("Puerto Serial desconectado.");
     } catch (err: any) {
-      addLog(\`ERROR al desconectar: \${err.message}\`);
+      addLog(`ERROR al desconectar: ${err.message}`);
     }
   }, []);
 
@@ -70,7 +70,7 @@ export function useWebSerial() {
       
       addLog("✅ Script transmitido con éxito al microcontrolador.");
     } catch (err: any) {
-      addLog(\`ERROR en transmisión: \${err.message}\`);
+      addLog(`ERROR en transmisión: ${err.message}`);
     }
   }, [isConnected]);
 
